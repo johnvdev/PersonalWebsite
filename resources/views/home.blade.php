@@ -3,7 +3,7 @@
 Home
 @endsection
 @section('content')
-<div class="container d-flex">
+<div class="container">
     <div class="row pt-4">
         <div class="col-4 col-lg-2">
             <div class="">
@@ -29,5 +29,6 @@ Home
             </div>
         </div>
     </div>
+    <h4 class="text-center">Coming Soon <a href="https://github.com/johnvdev/PersonalWebsite"><i class="fab fa-github"></i></a></a></h4>
 </div>
 @endsection
