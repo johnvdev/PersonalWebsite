@@ -3,14 +3,6 @@
 Home
 @endsection
 @section('content')
-<style>
-    #container {
-        background: #eaeaea;
-        height: 180px;
-        display: flex;
-        flex-direction: column;
-    }
-</style>
 <div class="container d-flex">
     <div class="row pt-4">
         <div class="col-4 col-lg-2">
@@ -27,7 +19,7 @@ Home
         </div>
         <div class="col-12 col-lg-7 d-flex ">
             <div class=" ">
-                <p class="lead">
+                <p class="lead p-4 pb-0">
                     Lets Code!
                 </p>
                 <p class="p-4 pb-0">
