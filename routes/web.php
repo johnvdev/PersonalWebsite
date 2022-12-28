@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
+use App\Models\Post;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
+use Spatie\YamlFrontMatter\YamlFrontMatter;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name('post');
+
+Route::get('/post/{slug}', [App\Http\Controllers\PostController::class, 'view'])->name('post');
+
