@@ -30,14 +30,6 @@ class PostController extends Controller
 
     public function view($slug)
     {
-        $validator = Validator::make(['slug' => $slug], [
-            'slug' => 'required|alpha_dash'
-        ]);
-          
-        if($validator->fails()){
-            abort(404);
-        }
-
         return view('post', ['post' => Post::find($slug)]);
     }
 }
