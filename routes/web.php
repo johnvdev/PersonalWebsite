@@ -3,8 +3,6 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\File;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +18,6 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name('post');
+Route::get('/posts', [App\Http\Controllers\PostsController::class, 'index']);
 
-Route::get('/post/{slug}', [App\Http\Controllers\PostController::class, 'view'])->name('post');
-
+Route::get('/posts/{post:slug}', [App\Http\Controllers\PostsController::class, 'view']);

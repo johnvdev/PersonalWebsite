@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use Illuminate\Support\Facades\Validator;
-use Spatie\YamlFrontMatter\YamlFrontMatter;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -28,8 +26,8 @@ class PostController extends Controller
         return view('posts', ['posts' => Post::all()]);
     }
 
-    public function view($slug)
+    public function view(Post $post)
     {
-        return view('post', ['post' => Post::find($slug)]);
+        return view('post', ['post' => $post]);
     }
 }
